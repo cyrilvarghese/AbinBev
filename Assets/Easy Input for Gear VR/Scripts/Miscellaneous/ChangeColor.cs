@@ -12,7 +12,7 @@ namespace EasyInputVR.Misc
         MeshRenderer myRenderer;
         Material myMaterial;
         Color originalColor;
-        public GameObject deac;
+      
 
         void Start()
         {
@@ -38,10 +38,9 @@ namespace EasyInputVR.Misc
             if (myMaterial.color == originalColor)
             {
                 myMaterial.color = Color.green;
-                if (deac)
-                    deac.gameObject.GetComponent<Animator>().enabled = false;
+             
             }
-                
+
             else
             {
                 myMaterial.color = originalColor;
@@ -50,5 +49,6 @@ namespace EasyInputVR.Misc
             }
                
         }
+    
     }
 }
