@@ -20153,15 +20153,15 @@ RectTransform:
   m_GameObject: {fileID: 727146275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.36766928, z: 1}
+  m_LocalScale: {x: 1, y: 0.49726495, z: 1}
   m_Children: []
   m_Father: {fileID: 1857429588}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 3}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.26499927}
+  m_SizeDelta: {x: 0, y: -5.4699984}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727146277
 MonoBehaviour:
@@ -38950,7 +38950,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1229091496}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 6.5, y: 0.8, z: 10.516315}
+  m_LocalPosition: {x: 6.5, y: 0.8, z: 4.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1707732722}
@@ -59434,7 +59434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1857429588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -59443,7 +59443,7 @@ RectTransform:
   m_GameObject: {fileID: 1857429587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 117.3}
-  m_LocalScale: {x: 0.7417005, y: 0.74170053, z: 0.74170053}
+  m_LocalScale: {x: 0.74170053, y: 0.7417006, z: 0.7417006}
   m_Children:
   - {fileID: 727146276}
   - {fileID: 371558225}
@@ -59454,7 +59454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39.099995, y: 0}
+  m_AnchoredPosition: {x: 39.099995, y: 10.57}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1857429589
@@ -61625,7 +61625,7 @@ MonoBehaviour:
   laserMaterial: {fileID: 2100000, guid: 18a35160df0bdf941b245ebbc6689fdd, type: 2}
   laserStartColor: {r: 0, g: 0.5368155, b: 0.9852941, a: 1}
   laserEndColor: {r: 0, g: 0.5368155, b: 0.9852941, a: 0}
-  laserDistance: 1
+  laserDistance: 10
   reticle: {fileID: 1707732718}
   reticleDistance: 10
   reticleColor: {r: 0, g: 0.9037525, b: 0.9852941, a: 1}
