@@ -10,12 +10,15 @@ public class ControlGOActivation : MonoBehaviour
     public GameObject[] ObjectToBeDeActivatedOnHover;
     public GameObject[] ObjectToBeActivatedOnHover;
     public GameObject bottleCount;
+    public GameObject CameraContainer;
+    public Vector3 CameraPosition;
+    public Vector3 CameraRotation;
     int currentCount = 0;
     // Use this for initialization
     void Start()
     {
-        
 
+     
 
 
     }
@@ -25,8 +28,13 @@ public class ControlGOActivation : MonoBehaviour
     {
 
     }
+
+
     public void ActivateAndDeActivateGO()
     {
+       
+
+
         foreach (var item in ObjectToBeActivated)
         {
             item.SetActive(true);                   // deac.gameObject.GetComponent<Animator>().enabled = false;
@@ -37,26 +45,26 @@ public class ControlGOActivation : MonoBehaviour
             item.SetActive(false);                   // deac.gameObject.GetComponent<Animator>().enabled = false;
 
         }
-        currentCount = PlayerPrefs.GetInt("currentXP");
+        //currentCount = PlayerPrefs.GetInt("currentXP");
 
-        PlayerPrefs.SetInt("currentXP", currentCount + 1);
+        //PlayerPrefs.SetInt("currentXP", currentCount + 1);
 
-        bottleCount.GetComponent<Text>().text = (currentCount + 1).ToString() + "/7 bottles collected";
+        //bottleCount.GetComponent<Text>().text = (currentCount + 1).ToString() + "/7 bottles collected";
 
 
 
-        if (currentCount + 1 == 7)
-        {
-            bottleCount.GetComponent<Text>().text = "All bottles collected!!!";
-            bottleCount.GetComponent<Animator>().enabled = true;
-        }
+        //if (currentCount + 1 == 7)
+        //{
+        //    bottleCount.GetComponent<Text>().text = "All bottles collected!!!";
+        //    bottleCount.GetComponent<Animator>().enabled = true;
+        //}
 
 
 
 
     }
     public void ActivateAndDeActivateGOOnHover()
-    {
+    {  
         foreach (var item in ObjectToBeActivatedOnHover)
         {
             item.SetActive(true);                   // deac.gameObject.GetComponent<Animator>().enabled = false;
@@ -88,6 +96,19 @@ public class ControlGOActivation : MonoBehaviour
     {
         AudioSource audioData = GetComponent<AudioSource>();
         audioData.Play(0);
+    }
+
+    public void UpdatePosition()
+    {
+        if (CameraContainer != null && CameraPosition != null)
+        {
+            CameraContainer.gameObject.GetComponent<Animator>().enabled = false;
+            CameraContainer.transform.position = CameraPosition;
+            //CameraContainer.transform.localEulerAngles = CameraRotation;
+        }
+
+       Invoke("ActivateAndDeActivateGO",1);
+
     }
 
 }

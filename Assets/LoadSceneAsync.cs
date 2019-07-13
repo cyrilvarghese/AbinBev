@@ -7,9 +7,13 @@ public class LoadSceneAsync : MonoBehaviour {
     public string sceneName = "";
     // Use this for initialization
     void Start () {
-        StartCoroutine(LoadYourAsyncScene(sceneName));
+        
     }
 	
+    public void StartAsync()
+    {
+        StartCoroutine(LoadYourAsyncScene(sceneName));
+    }
 	// Update is called once per frame
 	void Update () {
 		

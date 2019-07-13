@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActivateGameObjects : MonoBehaviour
-{
+public class ActivateDeActivateTimed : MonoBehaviour {
     public GameObject[] ObjectToBeDeActivated;
     public GameObject[] ObjectToBeActivated;
-    public GameObject CameraContainer;
-    public GameObject NextGO;
-    public Vector3 NextPostion;
+    public float delay;
+  
     // Use this for initialization
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -23,6 +21,11 @@ public class ActivateGameObjects : MonoBehaviour
 
     public void ActivateAndDeActivateGO()
     {
+        Invoke("ActDeactFunction", delay);
+      
+
+    }
+    public void ActDeactFunction() {
         foreach (var item in ObjectToBeActivated)
         {
             item.SetActive(true);                   // deac.gameObject.GetComponent<Animator>().enabled = false;
@@ -33,17 +36,7 @@ public class ActivateGameObjects : MonoBehaviour
             item.SetActive(false);                   // deac.gameObject.GetComponent<Animator>().enabled = false;
 
         }
-        
-    } 
-
-    public void UpdatePosition()
-    {
-        if(CameraContainer!= null && NextPostion != null && NextGO != null)
-        {
-            CameraContainer.gameObject.GetComponent<Animator>().enabled = false;
-            CameraContainer.transform.position = NextPostion;
-            //`CameraContainer.transform.LookAt(NextGO.transform);
-        }
-       
     }
+
+    
 }

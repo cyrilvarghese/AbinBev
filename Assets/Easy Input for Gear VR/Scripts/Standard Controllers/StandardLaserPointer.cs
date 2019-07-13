@@ -7,7 +7,7 @@ namespace EasyInputVR.StandardControllers
 {
 
     [AddComponentMenu("EasyInputGearVR/Standard Controllers/StandardLaserPointer")]
-    public class StandardLaserPointer : MonoBehaviour
+    public class StandardLaserPointer : StandardBaseLaser
     {
         public float heightOffset = 0f;
         public Material laserMaterial;
@@ -232,8 +232,15 @@ namespace EasyInputVR.StandardControllers
             laserInteraction = false;
         }
 
+        public override void TurnOffLaserAndReticle()
+        {
+            throw new NotImplementedException();
+        }
 
-
+        public override void TurnOnLaserAndReticle()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
