@@ -9,7 +9,7 @@ public class ControlGOActivation : MonoBehaviour
     public GameObject[] ObjectToBeActivated;
     public GameObject[] ObjectToBeDeActivatedOnHover;
     public GameObject[] ObjectToBeActivatedOnHover;
-    public GameObject bottleCount;
+    public GameObject NextHit;
     public GameObject CameraContainer;
     public Vector3 CameraPosition;
     public Vector3 CameraRotation;
@@ -108,6 +108,15 @@ public class ControlGOActivation : MonoBehaviour
         }
 
        Invoke("ActivateAndDeActivateGO",1);
+
+    }
+
+    public void ActivateNextHit()
+    {
+        if (NextHit != null)
+        {
+            NextHit.SetActive(true);
+        }
 
     }
 
