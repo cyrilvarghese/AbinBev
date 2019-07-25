@@ -9,7 +9,6 @@ public class ControlGOActivation : MonoBehaviour
     public GameObject[] ObjectToBeActivated;
     public GameObject[] ObjectToBeDeActivatedOnHover;
     public GameObject[] ObjectToBeActivatedOnHover;
-    public GameObject NextHit;
     public GameObject CameraContainer;
     public Vector3 CameraPosition;
     public Vector3 CameraRotation;
@@ -111,13 +110,6 @@ public class ControlGOActivation : MonoBehaviour
 
     }
 
-    public void ActivateNextHit()
-    {
-        if (NextHit != null)
-        {
-            NextHit.SetActive(true);
-        }
-
-    }
+    
 
 }
